@@ -1,0 +1,1 @@
+# Esse arquivo armazena as funções
