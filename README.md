@@ -43,6 +43,14 @@ Projeto-Sistema-Gestao-Academia/
     └── static/                 CSS e JavaScript
 ```
 
+## Instruções de Execução
+
+- A partir da raiz do projeto, use o seguinte comando: ./.venv/bin/python ./Sistema-Academia/app.py
+- Abra o link local que aparecer no terminal no navegador
+
+
+
+
 ## Documentação
 
 - [Histórias de usuário](docs/historias-de-usuario.md)
