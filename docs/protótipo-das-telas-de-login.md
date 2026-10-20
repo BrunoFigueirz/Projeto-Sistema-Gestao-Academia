@@ -2,7 +2,7 @@
 
 Protótipo de baixa fidelidade da tela de **login**. Serve para validar o fluxo de entrada no sistema com a equipe e como base para a implementação em Flask.
 
-- **Arquivo navegável:** [`prototipos/prototipo.html`](prototipos/prototipo.html) (abrir no navegador, sem instalar nada)
+- **Arquivo navegável:** [`prototipos/prototipo.html`](prototipos/prototipo.html) 
 - **Capturas de tela:** pasta [`prototipos/`](prototipos/)
 - **Caso de uso relacionado:** UC01 (Entrar no sistema), descrito em [`casos-de-uso.md`](casos-de-uso.md)
 
