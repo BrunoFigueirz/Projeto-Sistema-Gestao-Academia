@@ -1,7 +1,7 @@
 # Documento de Casos de Uso — Sistema de Gestão de Academia
 
 Projeto da disciplina **Análise e Projeto de Sistemas** — Semana 1.
-Modelo de especificação: *Engenharia de Software Moderna* (nome com verbo no infinitivo, ator principal, fluxo normal e extensões, com pré e pós-condições quando úteis). Casos de uso incluídos aparecem <u>sublinhados</u>.
+Modelo de especificação: *Engenharia de Software Moderna*. Casos de uso incluídos aparecem <u>sublinhados</u>.
 
 ---
 
