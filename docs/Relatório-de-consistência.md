@@ -13,4 +13,3 @@
 | Mínimos da disciplina | Cumpridos (seção 3) |
 | Regras de negócio apontam para os UCs certos | Atualizadas nesta versão |
 | Especificação segue o modelo do livro | Sim: nome com verbo, ator, fluxo normal, extensões, pré e pós-condições onde úteis |
-|---|---|
