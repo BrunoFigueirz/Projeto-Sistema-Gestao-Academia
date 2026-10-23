@@ -1,0 +1,99 @@
+@startuml
+title Sistema de Gestão de Academia - Diagrama de Casos de Uso
+left to right direction
+skinparam packageStyle rectangle
+skinparam usecase {
+  BackgroundColor #F8F9FF
+  BorderColor #5B7DB1
+}
+skinparam rectangle {
+  BorderColor #5B7DB1
+}
+
+actor "Funcionário" as Funcionario
+actor "Administrador" as Administrador
+actor "Aluno" as Aluno
+
+Administrador --|> Funcionario
+
+note bottom of Administrador
+  Herda todos os casos
+  de uso do Funcionário
+end note
+
+rectangle "Sistema de Gestão de Academia" {
+
+  rectangle "Pagamentos" {
+    usecase "UC13 - Aplicar desconto\nde estudante" as UC13
+    usecase "UC11 - Registrar pagamento" as UC11
+    usecase "UC12 - Validar data e vencimento" as UC12
+    usecase "UC14 - Alterar data de vencimento" as UC14
+    usecase "UC18 - Consultar histórico de\npagamentos do aluno" as UC18
+  }
+
+  rectangle "Alunos" {
+    usecase "UC04 - Cadastrar e editar aluno" as UC04
+    usecase "UC05 - Arquivar aluno" as UC05
+  }
+
+  rectangle "Matrículas" {
+    usecase "UC07 - Criar matrícula" as UC07
+    usecase "UC08 - Ativar matrícula" as UC08
+    usecase "UC09 - Suspender e reativar\nmatrícula" as UC09
+    usecase "UC10 - Encerrar matrícula" as UC10
+  }
+
+  rectangle "Presença e treinos" {
+    usecase "UC15 - Registrar presença" as UC15
+    usecase "UC16 - Associar treino ao aluno" as UC16
+  }
+
+  rectangle "Administração" {
+    usecase "UC03 - Gerenciar funcionários\ne perfis" as UC03
+    usecase "UC06 - Criar plano" as UC06
+    usecase "UC19 - Ver relatórios gerenciais" as UC19
+  }
+
+  rectangle "Acesso e área do aluno" {
+    usecase "UC01 - Entrar no sistema" as UC01
+    usecase "UC02 - Trocar a própria senha" as UC02
+    usecase "UC17 - Consultar plano, pagamentos\ne frequência" as UC17
+  }
+}
+
+' Relações entre casos de uso
+UC13 .> UC11 : <<extend>>
+UC11 .> UC12 : <<include>>
+
+note right of UC13
+  Ponto de extensão: cálculo do valor final.
+  Condição: aluno marcado como estudante
+  com plano mensal (RN02).
+end note
+
+' Funcionário
+Funcionario -- UC11
+Funcionario -- UC14
+Funcionario -- UC18
+Funcionario -- UC04
+Funcionario -- UC05
+Funcionario -- UC07
+Funcionario -- UC08
+Funcionario -- UC09
+Funcionario -- UC10
+Funcionario -- UC15
+Funcionario -- UC16
+Funcionario -- UC01
+Funcionario -- UC02
+
+' Administrador
+Administrador -- UC03
+Administrador -- UC06
+Administrador -- UC19
+
+' Aluno
+Aluno -- UC01
+Aluno -- UC02
+Aluno -- UC17
+
+@enduml
